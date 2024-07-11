@@ -56,7 +56,7 @@ Sub ticker()
     totalVal = 0
 
     
-    For i = 2 To 379501
+    For i = 2 To Cells(Rows.Count, "A").End(xlUp).Row
 
         
         If i = 2 Or Cells(i - 1, 1).Value <> Cells(i, 1).Value Then
@@ -108,7 +108,7 @@ Sub ticker()
             Range("L1").Value = "Total Stock Volume"
 
             Range("I" & Summary_Table_Row).Value = tickerName
-            Range("L" & Summary_Table_Row).NumberFormat = "0.00"
+            Range("L" & Summary_Table_Row).NumberFormat = "0"
             Range("L" & Summary_Table_Row).Value = totalVal
             Range("J" & Summary_Table_Row).Value = profit
             Range("K" & Summary_Table_Row).NumberFormat = "0.00%"
@@ -154,66 +154,15 @@ Sub ticker()
 
 End Sub
 
-'Function run though Greatest % increase . Can use this function for each quarter sheet
-Sub hightest()
+Sub highVol()
+
 Dim hightestPercent As Double
 hightestPercent = 0
 
-Dim tickerName As String
-tickerName = ""
 
-Dim percent As Double
-
-For i = 2 To 1501
-
-percent = Cells(i, "K").Value
-
-If percent > hightestPercent Then
-
- hightestPercent = percent
- tickerName = Cells(i, "I")
- 
- Range("N2").Value = "Greatest % increase"
- Range("O2").Value = tickerName
- Range("P2").NumberFormat = "0.00%"
- Range("P2").Value = percent
-End If
-
- Next i
-
-End Sub
-
-'Function run though Greatest % decrease . Can use this function for each quarter sheet
-Sub lowest()
 Dim lowPercent As Double
 lowPercent = 0
 
-Dim tickerName As String
-tickerName = ""
-
-Dim percent As Double
-
-For i = 2 To 1501
-
-percent = Cells(i, "K").Value
-
-If percent < lowPercent Then
-
- lowPercent = percent
- tickerName = Cells(i, "I")
- 
- Range("N3").Value = "Greatest % decrease"
- Range("O3").Value = tickerName
- Range("P3").NumberFormat = "0.00%"
- Range("P3").Value = percent
-End If
-
- Next i
-
-End Sub
-
-'Function run though Greatest total volume . Can use this function for each quarter sheet
-Sub highVol()
 
 Dim highestVol As Double
 highestVol = 0
@@ -223,23 +172,57 @@ tickerName = ""
 
 Dim vol As Double
 
+Dim percent As Double
+
 For i = 2 To 1501
-vol = Cells(i, "L").Value
 
-If vol > highestVol Then
+    percent = Cells(i, "K").Value
 
-highestVol = vol
+    If percent > hightestPercent Then
 
-tickerName = Cells(i, "I")
-Range("N4").Value = "Greatest total volume"
-Range("O4").Value = tickerName
-Range("P4").Value = vol
+    hightestPercent = percent
+    tickerName = Cells(i, "I")
+    
+    Range("N2").Value = "Greatest % increase"
+    Range("O2").Value = tickerName
+    Range("P2").NumberFormat = "0.00%"
+    Range("P2").Value = percent
+    End If
 
-End If
+Next i
+
+
+For i = 2 To 1501
+
+    percent = Cells(i, "K").Value
+
+    If percent < lowPercent Then
+
+    lowPercent = percent
+    tickerName = Cells(i, "I")
+    
+    Range("N3").Value = "Greatest % decrease"
+    Range("O3").Value = tickerName
+    Range("P3").NumberFormat = "0.00%"
+    Range("P3").Value = percent
+    End If
+Next i
+
+For i = 2 To 1501
+    vol = Cells(i, "L").Value
+
+    If vol > highestVol Then
+
+    highestVol = vol
+    tickerName = Cells(i, "I")
+
+    Range("N4").Value = "Greatest total volume"
+    Range("O4").Value = tickerName
+    Range("P4").Value = vol
+
+    End If
 Next i
 
 End Sub
-
-
 
 
