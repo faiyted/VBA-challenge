@@ -31,7 +31,8 @@ Sub Combine()
 
 End Sub
 
-'Function run though Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each quarter sheet
+'Function run for Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each quarter sheet
+'Function run for "Greatest % increase", "Greatest % decrease", and "Greatest total volume. Can use this fuction for each quarter sheet
 Sub ticker()
 
     Dim tickerName As String
@@ -151,30 +152,23 @@ Sub ticker()
         End If
         
     Next i
-
-End Sub
-
-Sub highVol()
-
+    
 Dim hightestPercent As Double
 hightestPercent = 0
-
 
 Dim lowPercent As Double
 lowPercent = 0
 
-
 Dim highestVol As Double
 highestVol = 0
 
-Dim tickerName As String
 tickerName = ""
 
 Dim vol As Double
 
 Dim percent As Double
 
-For i = 2 To 1501
+For i = 2 To Cells(Rows.Count, "A").End(xlUp).Row
 
     percent = Cells(i, "K").Value
 
@@ -192,7 +186,7 @@ For i = 2 To 1501
 Next i
 
 
-For i = 2 To 1501
+For i = 2 To Cells(Rows.Count, "A").End(xlUp).Row
 
     percent = Cells(i, "K").Value
 
@@ -208,21 +202,26 @@ For i = 2 To 1501
     End If
 Next i
 
-For i = 2 To 1501
+For i = 2 To Cells(Rows.Count, "A").End(xlUp).Row
     vol = Cells(i, "L").Value
 
     If vol > highestVol Then
 
     highestVol = vol
-    tickerName = Cells(i, "I")
 
+    tickerName = Cells(i, "I")
     Range("N4").Value = "Greatest total volume"
     Range("O4").Value = tickerName
     Range("P4").Value = vol
 
     End If
 Next i
+Range("O1").Value = "Ticker"
+Range("P1").Value = "Value"
+
+    
+    
+    
+    
 
 End Sub
-
-
