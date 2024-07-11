@@ -31,7 +31,7 @@ Sub Combine()
 
 End Sub
 
-'Function run though Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each qrt sheet
+'Function run though Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each quarter sheet
 Sub ticker()
 
     Dim tickerName As String
