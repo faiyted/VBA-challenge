@@ -1,4 +1,5 @@
 Attribute VB_Name = "Module1"
+'Function for each quarter and combine to one sheet
 Sub Combine()
 
 
@@ -29,6 +30,8 @@ Sub Combine()
     combined_sheet.Columns("A:G").AutoFit
 
 End Sub
+
+'Function run though Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each qrt sheet
 Sub ticker()
 
     Dim tickerName As String
@@ -151,6 +154,7 @@ Sub ticker()
 
 End Sub
 
+'Function run though Greatest % increase . Can use this function for each quarter sheet
 Sub hightest()
 Dim hightestPercent As Double
 hightestPercent = 0
@@ -178,6 +182,8 @@ End If
  Next i
 
 End Sub
+
+'Function run though Greatest % decrease . Can use this function for each quarter sheet
 Sub lowest()
 Dim lowPercent As Double
 lowPercent = 0
@@ -206,7 +212,7 @@ End If
 
 End Sub
 
-
+'Function run though Greatest total volume . Can use this function for each quarter sheet
 Sub highVol()
 
 Dim highestVol As Double
