@@ -1,35 +1,4 @@
 Attribute VB_Name = "Module1"
-'Function for each quarter and combine to one sheet
-Sub Combine()
-
-
-    
-    Sheets.Add.name = "Combined_Data"
-    
-    Sheets("Combined_Data").Move Before:=Sheets(1)
-    
-    Set combined_sheet = Worksheets("Combined_Data")
-
-    
-    For Each ws In Worksheets
-
-        lastRow = combined_sheet.Cells(Rows.Count, "A").End(xlUp).Row + 1
-
-        
-        lastRowYear = ws.Cells(Rows.Count, "A").End(xlUp).Row - 1
-
-        
-        combined_sheet.Range("A" & lastRow & ":G" & ((lastRowYear - 1) + lastRow)).Value = ws.Range("A2:K" & (lastRowYear + 1)).Value
-
-    Next ws
-
-   
-    combined_sheet.Range("A1:G1").Value = Sheets(2).Range("A1:G1").Value
-    
-   
-    combined_sheet.Columns("A:G").AutoFit
-
-End Sub
 
 'Function run for Ticker/ Quarterly change/Percentage change/Total stock volume. Can use this fuction for each quarter sheet
 'Function run for "Greatest % increase", "Greatest % decrease", and "Greatest total volume. Can use this fuction for each quarter sheet
