@@ -1,6 +1,6 @@
 # VBA-challenge
 
-** Create a script that loops through all the stocks for each quarter and outputs the following information:
+** Create a script that loops through all the stocks in each quarter and outputs the following information:
 
   - The ticker symbol : Loop through ticker for each quarter 
   
