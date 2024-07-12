@@ -1,5 +1,4 @@
 # VBA-challenge
-** Create new sheet called Combined_Data, loop thrugh all sheet from Q1to Q4
 
 ** Create a script that loops through all the stocks for each quarter and outputs the following information:
 
@@ -11,7 +10,9 @@
   - Percentage change: Loop through (last date - first date)/ first date *100 for each quarter 
     - if the value > 0 color in green, value < 0 color in red, value = 0 then  no color
     
-  - The total stock volume of the stock: Loop through Q1 to Q4 vol in column L
+  - The total stock volume of the stock: Loop through vol in column L
+
+  - Add Greatest Increase, Greatest Decrease and Greatest Total Value with related Ticker 
 
 ** The result should match the following image:
 ![image](https://github.com/faiyted/VBA-challenge/assets/171522014/e42054cf-7a9a-4bd3-b7ca-d3607da795fc)
