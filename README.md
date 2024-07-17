@@ -19,3 +19,16 @@
 
 ** Add functionality to the script to return the stock with the "Greatest % increase", "Greatest % decrease", and "Greatest total volume". 
 ![image](https://github.com/faiyted/VBA-challenge/assets/171522014/da30f989-dcd2-4297-b31f-b8bc1d902e80)
+
+** Result from Q1
+![image](https://github.com/user-attachments/assets/fc4a0c29-a3cc-477e-83a0-8c185f8b0a23)
+
+** Result from Q2
+![image](https://github.com/user-attachments/assets/8eb45609-8110-48f5-8e30-5bbb6e34f2cf)
+
+** Result from Q3
+![image](https://github.com/user-attachments/assets/352b541b-0026-4594-b266-0ca058006485)
+
+** Result from Q4
+![image](https://github.com/user-attachments/assets/2af8aa77-7f75-438d-806d-c8c3a7f1de7c)
+
