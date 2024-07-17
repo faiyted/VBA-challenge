@@ -12,7 +12,9 @@
     
   - The total stock volume of the stock: Loop through vol in column L
 
-  - Add Greatest Increase, Greatest Decrease and Greatest Total Value with related Ticker 
+  - Add Greatest Increase, Greatest Decrease and Greatest Total Value with related Ticker
+  
+  - Loops across all the worksheets (Q1 to Q4)
 
 ** The result should match the following image:
 ![image](https://github.com/faiyted/VBA-challenge/assets/171522014/e42054cf-7a9a-4bd3-b7ca-d3607da795fc)
