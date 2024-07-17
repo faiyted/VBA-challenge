@@ -148,7 +148,3 @@ Sub ticker()
 End Sub
 
     
-    
-    
-
-End Sub
